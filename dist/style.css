@@ -9,6 +9,10 @@
   --secondary-text-color: rgb(2, 20, 68);
   --medium-color: rgb(0, 145, 255);
   --body-bg-color: rgb(225, 222, 214);
+  --skill-bar-color: rgb(2, 8, 70);
+  --invert-dark-color: black;
+  --invert-bright-color: white;
+  --invert-blue-color: rgb(206, 230, 254);
 
   --font: "Martian Mono", sans-serif;
 
@@ -55,7 +59,11 @@ body.dark-theme {
   --secondary-text-color: rgb(153, 216, 255);
   --secondary-bg-color: rgb(2, 20, 68);
   --medium-color: rgb(0, 145, 255);
-  --body-bg-color: rgb(225, 222, 214);
+  --body-bg-color: rgb(105, 102, 94);
+  --skill-bar-color: rgb(0, 145, 255);
+  --invert-dark-color: white;
+  --invert-bright-color: black;
+  --invert-blue-color: rgb(2, 8, 70);
 }
 
 .nav-cluster {
@@ -72,7 +80,7 @@ body.dark-theme {
 
 .change-theme:hover {
   background-color: var(--primary-text-color);
-  color: white;
+  color: var(--invert-bright-color);
   border-radius: 1rem;
 }
 
@@ -164,14 +172,14 @@ nav {
 
 .nav-logo,
 .nav-toggle {
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
   font-weight: var(--font-medium);
   cursor: pointer;
 }
 
 .nav-logo:hover,
 .nav-toggle:hover {
-  color: white;
+  color: var(--medium-color);
 }
 
 @media screen and (max-width: 767px) {
@@ -228,7 +236,7 @@ nav {
 }
 
 .active-link {
-  color: var(--primary-color);
+  color: var(--medium-color);
 }
 
 .scroll-header {
@@ -454,7 +462,7 @@ nav {
 
 .skill-percentage {
   display: block;
-  background-color: var(--primary-text-color);
+  background-color: var(--skill-bar-color);
 }
 
 .skill-html {
@@ -655,7 +663,7 @@ nav {
 
 .contact-subtitle {
   font-size: var(--small-font-size);
-  color: black;
+  color: var(--invert-dark-color);
 }
 
 .contact-content {
@@ -666,13 +674,13 @@ nav {
 
 .contact-label {
   font-size: var(--smallest-font-size);
-  color: black;
+  color: var(--invert-dark-color);
 }
 
 .contact-input {
   width: 100%;
   background-color: var(--body-bg-color);
-  color: black;
+  color: var(--invert-dark-color);
   font-family: var(--font);
   font-size: var(--default-font-size);
   border: none;
@@ -720,7 +728,6 @@ nav {
 .footer-copyright {
   font-size: var(--smallest-font-size);
   text-align: center;
-  color: white;
   margin-top: var(--mb-3);
 }
 
@@ -728,7 +735,7 @@ nav {
 .footer-subtitle,
 .footer-link,
 .footer-social {
-  color: white;
+  color: var(--invert-blue-color);
 }
 
 .scrollup {
@@ -750,7 +757,7 @@ nav {
 
 .scrollup-icon {
   font-size: 1.5rem;
-  color: white;
+  color: var(--invert-blue-color);
 }
 
 .show-scroll {

@@ -8,43 +8,45 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
     />
+    <link rel="stylesheet" href="../src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <nav class="nav-container">
-        <a href="" class="nav-logo">Min Wei</a>
+    <header id="header">
+      <nav class="nav-container container">
+        <a href="#" class="nav-logo">Min Wei</a>
         <div class="nav-menu">
-          <ul class="nav-list">
+          <ul class="nav-list grid">
             <li class="nav-item">
-              <a href="#home" class="nav-link">
-                <i class="uil uil-estate"></i>Home
+              <a href="#home" class="nav-link active-link">
+                <i class="uil uil-estate nav-icon"></i>Home
               </a>
             </li>
             <li class="nav-item">
               <a href="#about" class="nav-link">
-                <i class="uil uil-user-circle"></i>About
+                <i class="uil uil-user-circle nav-icon"></i>About
               </a>
             </li>
             <li class="nav-item">
               <a href="#skills" class="nav-link">
-                <i class="uil uil-file-alt"></i>Skills
+                <i class="uil uil-file-alt nav-icon"></i>Skills
               </a>
             </li>
             <li class="nav-item">
               <a href="#portfolio" class="nav-link">
-                <i class="uil uil-folder-open"></i>Portfolio
+                <i class="uil uil-folder-open nav-icon"></i>Portfolio
               </a>
             </li>
             <li class="nav-item">
               <a href="#contact" class="nav-link">
-                <i class="uil uil-phone"></i>Contact
+                <i class="uil uil-phone nav-icon"></i>Contact
               </a>
             </li>
           </ul>
           <i class="uil uil-times-circle nav-close" id="nav-close"></i>
         </div>
         <div class="nav-cluster">
+          <i class="uil uil-moon change-theme" id="theme-button"></i>
           <div class="nav-toggle" id="nav-toggle">
             <i class="uil uil-bars"></i>
           </div>
@@ -54,20 +56,26 @@
 
     <main>
       <section class="home-section" id="home">
-        <div class="home-container container">
-          <div class="home-content">
+        <div class="home-container container grid">
+          <div class="home-content grid">
             <div class="home-social">
-              <a href="https://github.com/memewei" class="home-social-icon">
+              <a
+                href="https://github.com/memewei"
+                target="_blank"
+                class="home-social-icon"
+              >
                 <i class="uil uil-github"></i>
               </a>
               <a
                 href="https://www.linkedin.com/in/minweichin/"
+                target="_blank"
                 class="home-social-icon"
               >
                 <i class="uil uil-linkedin"></i>
               </a>
               <a
                 href="https://www.instagram.com/memeweiiii/"
+                target="_blank"
                 class="home-social-icon"
               >
                 <i class="uil uil-instagram-alt"></i>
@@ -81,6 +89,7 @@
                 fill="black"
                 height="500px"
                 width="500px"
+                class="home-blob"
               >
                 <path
                   fill="rgb(2, 8, 70)"
@@ -108,11 +117,11 @@
           </div>
         </div>
       </section>
-      <section class="about-section">
+      <section class="about-section" id="about">
         <h2 class="section-title">About Me</h2>
         <span class="section-subtitle">My introduction</span>
 
-        <div class="about-container grid">
+        <div class="about-container container grid">
           <img src="" alt="" />
           <div class="about-data">
             <p class="about-description">
@@ -149,11 +158,11 @@
           </div>
         </div>
       </section>
-      <section class="skills-section">
+      <section class="skills-section" id="skills">
         <h2 class="section-title">Skills</h2>
         <span class="section-subtitle">My technical proficiency</span>
-        <div class="skills-container grid">
-          <div class="container">
+        <div class="skills-container container grid">
+          <div>
             <div class="skills-content open">
               <div class="skills-header">
                 <i class="uil uil-brackets-curly skills-icon"></i>
@@ -253,138 +262,89 @@
           </div>
         </div>
       </section>
-      <section class="qualification">
+      <section class="qualification" id="qualification">
         <h2 class="section-title">Qualifications</h2>
         <span class="section-subtitle">My personal journey</span>
         <div class="qualification-container">
           <div class="qualification-tabs">
-            <div class="qualification-button button-flex">
-              <i class="uil uil-graduation-cap"></i>
+            <div
+              class="qualification-button button-flex qualification-active"
+              data-target="#education"
+            >
+              <i class="uil uil-graduation-cap qualification-icon"></i>
               Education
             </div>
-            <div class="qualification-button button-flex">
-              <i class="uil uil-briefcase-alt"></i>
+            <div class="qualification-button button-flex" data-target="#work">
+              <i class="uil uil-briefcase-alt qualification-icon"></i>
               Professional Experience
             </div>
           </div>
           <div class="qualification-sections">
             <div
-              class="qualification-content active"
+              class="qualification-content qualification-active"
               data-content
               id="education"
             >
               <div class="qualification-data">
                 <div class="qualification-tag">
-                  <h3 class="qualification-title">Diploma in Bioengineering</h3>
+                  <h3 class="qualification-title">
+                    Singapore-Cambridge GCE O-Level
+                  </h3>
                   <span class="qualification-subtitle"
-                    >Singapore Polytechnic, Singapore</span
+                    >Nan Hua High School, Singapore</span
                   >
                   <div class="qualification-calendar">
                     <i class="uil uil-calender"></i>
-                    April 2019 - April 2022
+                    2015 - 2018
                   </div>
                 </div>
                 <div class="timeline-container">
                   <span class="qualification-point"></span>
                   <span class="qualification-line"></span>
                 </div>
-                <div class="qualification-data">
-                  <div></div>
-                  <div class="timeline-container">
-                    <span class="qualification-point"></span>
-                    <span class="qualification-line"></span>
-                  </div>
-                  <div class="qualification-tag">
-                    <h3 class="qualification-title">Research Intern</h3>
-                    <span class="qualification-subtitle"
-                      >Singapore-MIT Alliance for Research and Technology,
-                      Singapore</span
-                    >
-                    <div class="qualification-calendar">
-                      <i class="uil uil-calender"></i>
-                      September 2021 - February 2022
-                    </div>
-                  </div>
+              </div>
+              <div class="qualification-data">
+                <div></div>
+                <div class="timeline-container">
+                  <span class="qualification-point"></span>
+                  <span class="qualification-line"></span>
                 </div>
-                <div class="qualification-data">
-                  <div>
-                    <h3 class="qualification-title">Research Assistant</h3>
-                    <span class="qualification-subtitle"
-                      >DSO National Laboratories, Singapore</span
-                    >
-                    <div class="qualification__calendar">
-                      <i class="uil uil-calendar-alt"></i>
-                      July 2022 - December 2022
-                    </div>
-                  </div>
-                  <div>
-                    <span class="qualification__rounder"></span>
+                <div class="qualification-tag">
+                  <h3 class="qualification-title">Diploma in Bioengineering</h3>
+                  <span class="qualification-subtitle">
+                    Singapore Polytechnic, Singapore</span
+                  >
+                  <div class="qualification-calendar">
+                    <i class="uil uil-calender"></i>
+                    April 2019 - April 2022
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="qualification-content active" data-content id="work">
               <div class="qualification-data">
-                <div class="qualification-tag">
-                  <h3 class="qualification-title">Diploma in Bioengineering</h3>
-                  <span class="qualification-subtitle"
-                    >Singapore Polytechnic, Singapore</span
-                  >
+                <div>
+                  <h3 class="qualification-title">The Odin Project</h3>
+                  <span class="qualification-subtitle">Online</span>
                   <div class="qualification-calendar">
                     <i class="uil uil-calender"></i>
-                    April 2019 - April 2022
+                    June 2023 - November 2023
                   </div>
                 </div>
                 <div class="timeline-container">
                   <span class="qualification-point"></span>
-                  <span class="qualification-line"></span>
-                </div>
-                <div class="qualification-data">
-                  <div></div>
-                  <div class="timeline-container">
-                    <span class="qualification-point"></span>
-                    <span class="qualification-line"></span>
-                  </div>
-                  <div class="qualification-tag">
-                    <h3 class="qualification-title">Research Intern</h3>
-                    <span class="qualification-subtitle"
-                      >Singapore-MIT Alliance for Research and Technology,
-                      Singapore</span
-                    >
-                    <div class="qualification-calendar">
-                      <i class="uil uil-calender"></i>
-                      September 2021 - February 2022
-                    </div>
-                  </div>
-                </div>
-                <div class="qualification-data">
-                  <div>
-                    <h3 class="qualification-title">Research Assistant</h3>
-                    <span class="qualification-subtitle"
-                      >DSO National Laboratories, Singapore</span
-                    >
-                    <div class="qualification__calendar">
-                      <i class="uil uil-calendar-alt"></i>
-                      July 2022 - December 2022
-                    </div>
-                  </div>
-                  <div>
-                    <span class="qualification__rounder"></span>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <h2 class="section-title">Portfolio</h2>
         <span class="section-subtitle">Most recent work</span>
 
-        <div class="portfolio-container">
-          <div class="container">
-            <div class="portfolio-content grid">
-              <img src="src/sign-up-form.png" alt="screenshot-live-demo" />
+        <div class="portfolio-container container swiper-container">
+          <div class="swiper-wrapper">
+            <div class="portfolio-content grid swiper-slide">
+              <img src="../src/sign-up-form.png" alt="screenshot-live-demo" />
               <div class="portfolio-data">
                 <h3 class="portfolio-title">Sign-Up Form</h3>
                 <p class="portfolio-description">
@@ -398,8 +358,11 @@
                 </a>
               </div>
             </div>
-            <div class="portfolio-content grid">
-              <img src="src/knight-travails.png" alt="screenshot-live-demo" />
+            <div class="portfolio-content grid swiper-slide">
+              <img
+                src="../src/knight-travails.png"
+                alt="screenshot-live-demo"
+              />
               <div class="portfolio-data">
                 <h3 class="portfolio-title">Knight Travails</h3>
                 <p class="portfolio-description">
@@ -414,9 +377,9 @@
                 </a>
               </div>
             </div>
-            <div class="portfolio-content grid">
+            <div class="portfolio-content grid swiper-slide">
               <img
-                src="src/rock-paper-scissors.png"
+                src="../src/rock-paper-scissors.png"
                 alt="screenshot-live-demo"
               />
               <div class="portfolio-data">
@@ -433,9 +396,120 @@
               </div>
             </div>
           </div>
+          <div class="swiper-button-next swiper-portfolio-icon">
+            <i class="uil uil-angle-double-right"></i>
+          </div>
+          <div class="swiper-button-prev swiper-portfolio-icon">
+            <i class="uil uil-angle-double-left"></i>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <section class="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <span class="section-subtitle">Get in touch</span>
+        <div class="contact-container container grid">
+          <div>
+            <div class="contact-info">
+              <i class="uil uil-phone contact-icon"></i>
+              <div>
+                <h3 class="contact-title">Call Me</h3>
+                <span class="contact-subtitle">+65 9159 9368</span>
+              </div>
+            </div>
+            <div class="contact-info">
+              <i class="uil uil-envelope contact-icon"></i>
+              <div>
+                <h3 class="contact-title">Email Me</h3>
+                <span class="contact-subtitle">smemewei@gmail.com</span>
+              </div>
+            </div>
+            <div class="contact-info">
+              <i class="uil uil-map-marker contact-icon"></i>
+              <div>
+                <h3 class="contact-title">Location</h3>
+                <span class="contact-subtitle">Singapore, Singapore</span>
+              </div>
+            </div>
+          </div>
+          <form action="" class="contact-form grid">
+            <div class="contact-inputs grid">
+              <div class="contact-content">
+                <label for="" class="contact-label">Name</label>
+                <input type="text" class="contact-input" />
+              </div>
+              <div class="contact-content">
+                <label for="" class="contact-label">Email</label>
+                <input type="email" class="contact-input" />
+              </div>
+              <div class="contact-content">
+                <label for="" class="contact-label">Project</label>
+                <input type="text" class="contact-input" />
+              </div>
+              <div class="contact-content">
+                <label for="" class="contact-label">Message</label>
+                <textarea
+                  name=""
+                  id=""
+                  cols="0"
+                  rows="7"
+                  class="contact-input"
+                ></textarea>
+              </div>
+              <div>
+                <a href="" class="button button-flex">
+                  Send
+                  <i class="uil uil-message button-icon"></i>
+                </a>
+              </div>
+            </div>
+          </form>
         </div>
       </section>
     </main>
+    <footer>
+      <div class="footer-bg">
+        <div class="footer-container container grid">
+          <div>
+            <h1 class="footer-title">Min Wei</h1>
+            <span class="footer-subtitle">Front-End Developer</span>
+          </div>
+          <ul class="footer-links">
+            <li>
+              <a href="#services" class="footer-link">Services</a>
+            </li>
+            <li>
+              <a href="#portfolio" class="footer-link">Portfolio</a>
+            </li>
+            <li>
+              <a href="#contact" class="footer-link">Contact</a>
+            </li>
+          </ul>
+          <div class="footer-socials">
+            <a href="" target="_blank" class="footer-social">
+              <i class="uil uil-instagram"></i>
+            </a>
+            <a href="" target="_blank" class="footer-social">
+              <i class="uil uil-twitter-alt"></i>
+            </a>
+            <a href="" target="_blank" class="footer-social">
+              <i class="uil uil-linkedin-alt"></i>
+            </a>
+          </div>
+        </div>
+        <p class="footer-copyright">
+          Copyright &#169;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          memewei. All rights reserved
+        </p>
+      </div>
+    </footer>
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="uil uil-arrow-up scrollup-icon"></i>
+    </a>
+    <script src="../src/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

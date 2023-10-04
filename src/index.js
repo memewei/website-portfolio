@@ -12,6 +12,8 @@ const darkTheme = "dark-theme";
 const iconTheme = "uil-sun";
 const selectedTheme = localStorage.getItem("selected-theme");
 const selectedIcon = localStorage.getItem("selected-icon");
+const submitBtn = document.getElementById("send-button");
+const form = document.querySelector(".contact-form");
 
 if (navToggle) {
   navToggle.addEventListener("click", () => {
@@ -107,4 +109,8 @@ themeButton.addEventListener("click", () => {
   themeButton.classList.toggle(iconTheme);
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
+});
+
+submitBtn.addEventListener("click", () => {
+  form.submit();
 });

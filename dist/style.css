@@ -268,7 +268,7 @@ nav {
   color: white;
 }
 
-.home svg {
+.home-blob {
   width: 200px;
   fill: var(--primary-text-color);
 }
@@ -369,6 +369,7 @@ nav {
 
 .about-description {
   text-align: center;
+  overflow-wrap: break-word;
   margin-bottom: var(--mb-2-5);
 }
 
@@ -512,9 +513,12 @@ nav {
 }
 
 .qualification-tabs {
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   margin-bottom: var(--mb-2);
+  gap: 2rem;
 }
 
 .qualification-button {
@@ -584,6 +588,7 @@ nav {
 
 .portfolio-container {
   overflow: initial;
+  position: relative;
 }
 
 .portfolio-content {
@@ -627,7 +632,7 @@ nav {
   right: -0.5rem;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets {
+.swiper-container-horizontal > .swiper-pagination-bullet {
   bottom: -2.5rem;
 }
 
@@ -844,7 +849,7 @@ nav {
     margin: 0;
   }
 
-  .section {
+  section {
     padding: 6rem 0 2rem;
   }
 
@@ -929,7 +934,7 @@ nav {
   }
 
   .qualification-tabs {
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .qualification-button {

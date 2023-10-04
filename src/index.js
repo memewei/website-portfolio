@@ -60,6 +60,8 @@ tabs.forEach((tab) => {
 
 let swiper = new Swiper(".portfolio-container", {
   cssMode: true,
+  loop: true,
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -71,7 +73,7 @@ let swiper = new Swiper(".portfolio-container", {
 });
 
 function scrollActive() {
-  const scrollY = window.scrollY;
+  const scrollY = window.pageYOffset;
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;

@@ -31,4 +31,4 @@ $mail->Text = $message;
 
 $mail->send();
 
-header("Location: index.html");
+?>

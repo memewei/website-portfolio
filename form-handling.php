@@ -14,13 +14,14 @@ $mail = new PHPMailer(true);
 
 $mail->isSMTP();
 $mail->SMTPAuth = true;
+$mail->Mailer = 'smtp';
 
 $mail->Host = "smtp.gmail.com";
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->Port = 587;
 
 $mail->Username = "smemewei@gmail.com";
-$mail->Password = "haqzeq-4vovqi-veJhur";
+$mail->Password = "lchs aioi nhia hyha";
 
 $mail->setFrom($email, $name);
 $mail->addAddress("smemewei@gmail.com", "Min Wei");
